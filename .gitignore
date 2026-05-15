@@ -4,3 +4,6 @@ node_modules/
 build/
 dist/
 .DS_Store
+.env.example
+.env.save
+*.env.*
