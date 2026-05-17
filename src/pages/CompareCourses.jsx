@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Search, X, CheckCircle, Star, MapPin, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const API = 'https://https://edunexus-backend-4es3.onrender.com';
+const API = 'https://edunexus-backend-4es3.onrender.com/api';
 
 const CARD_COLORS = [
   { bg: 'linear-gradient(135deg,#1e3a5f,#2d5a8e)', accent: '#60a5fa' },

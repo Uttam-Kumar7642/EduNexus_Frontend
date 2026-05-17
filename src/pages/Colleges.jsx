@@ -3,7 +3,7 @@ import { useSearchParams, Link } from 'react-router-dom';
 import { Search, X, Star, MapPin, CheckCircle, Filter } from 'lucide-react';
 import toast from 'react-hot-toast';
 
-const API = 'https://https://edunexus-backend-4es3.onrender.com';
+const API = 'https://edunexus-backend-4es3.onrender.com/api';
 const CATEGORIES = ['All','Engineering','Management','Medical','Law','Arts','Science','Commerce','Design'];
 const MODES = ['All','Online','Offline','Hybrid'];
 

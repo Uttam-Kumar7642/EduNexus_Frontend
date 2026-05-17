@@ -6,7 +6,7 @@ import { useAuth } from '../context/AuthContext';
 const CATEGORIES = ['All','Technology','Business','Design','Marketing','Finance','Language'];
 const LEVELS = ['All','Beginner','Intermediate','Advanced','All Levels'];
 
-const API = "https://https://edunexus-backend-4es3.onrender.com";
+const API = "https://edunexus-backend-4es3.onrender.com/api";
 
 export default function Courses() {
   const [searchParams, setSearchParams] = useSearchParams();
