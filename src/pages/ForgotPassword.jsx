@@ -83,6 +83,10 @@ export default function ForgotPassword() {
               <form onSubmit={handleSendOtp} className={styles.form}>
                 <div className={styles.field}>
                   <label className={styles.label}>Email Address</label>
+                  <div className={styles.inputWrap}>
+                    <Mail size={16} className={styles.inputIcon} />
+                    <input type="email" autoComplete="email" name="email" className={styles.input} placeholder="you@example.com" value={email} onChange={(e) => setEmail(e.target.value)} />
+                  </div>
                 </div>
                 <button type="submit" className={styles.submitBtn} disabled={loading}>
                   {loading ? <span className={styles.btnLoader} /> : <>Send OTP <ArrowRight size={16} /></>}
