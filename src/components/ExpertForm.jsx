@@ -2,7 +2,7 @@ import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { Phone, Mail, User, BookOpen, MessageSquare, X } from 'lucide-react';
 
-const API = 'http://localhost:5000/api';
+const API = 'https://https://edunexus-backend-4es3.onrender.com';
 
 export default function ExpertForm({ onClose, isModal = false }) {
   const [form, setForm] = useState({ name: '', email: '', phone: '', courseInterest: '', message: '' });

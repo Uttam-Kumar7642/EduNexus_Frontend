@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Search, Star, Users, CheckCircle, ArrowRight, BookOpen, Monitor, Building2, GraduationCap, Code2, FileText, Globe, Phone, Mail, MessageSquare } from 'lucide-react';
 import toast from 'react-hot-toast';
 
-const API = 'http://localhost:5000/api';
+const API = 'https://https://edunexus-backend-4es3.onrender.com';
 
 const CARD_COLORS = [
   { bg: 'linear-gradient(135deg,#1e3a5f,#2d5a8e)', accent: '#60a5fa', border: 'rgba(96,165,250,0.3)' },

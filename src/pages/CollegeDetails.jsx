@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { MapPin, Star, Users, Award, CheckCircle, Phone, Mail, Clock, BookOpen, TrendingUp, Shield, ArrowRight, Building2, X } from 'lucide-react';
 import toast from 'react-hot-toast';
 
-const API = 'http://localhost:5000/api';
+const API = 'https://https://edunexus-backend-4es3.onrender.com';
 
 function EnquiryModal({ college, onClose }) {
   const [form, setForm] = useState({ name: '', email: '', phone: '', courseInterest: '', message: '' });
