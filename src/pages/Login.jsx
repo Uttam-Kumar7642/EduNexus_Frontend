@@ -1,3 +1,4 @@
+import EmailInput from '../components/EmailInput';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Eye, EyeOff, Mail, Lock, ArrowRight, Shield, User } from 'lucide-react';
@@ -114,12 +115,15 @@ export default function Login() {
                   <label className={styles.label}>Email address</label>
                   <div className={styles.inputWrap}>
                     <Mail size={16} className={styles.inputIcon} />
-                    <input type="email" className={styles.input} placeholder="you@example.com" value={form.email} onChange={set('email')} autoComplete="email" />
+                    <EmailInput className={styles.input} placeholder="you@example.com" value={form.email} onChange={e => setForm(p => ({ ...p, email: e.target.value }))} />
                   </div>
                 </div>
                 <div className={styles.field}>
                   <div className={styles.labelRow}>
-                    <label className={styles.label}>Password</label>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                {/* <label className={styles.label}></label> */}
+                <Link to="/forgot-password" style={{ fontSize: 13, color: '#f59e0b', textDecoration: 'none' }}> Forgot password?</Link>
+              </div>
                   </div>
                   <div className={styles.inputWrap}>
                     <Lock size={16} className={styles.inputIcon} />
@@ -155,7 +159,7 @@ export default function Login() {
                   <label className={styles.label}>Email address</label>
                   <div className={styles.inputWrap}>
                     <Mail size={16} className={styles.inputIcon} />
-                    <input type="email" className={styles.input} placeholder="admin@example.com" value={form.email} onChange={set('email')} />
+                    <input type="email" autoComplete="email" name="email" className={styles.input} placeholder="admin@example.com" value={form.email} onChange={set('email')} />
                   </div>
                 </div>
                 <div className={styles.field}>
@@ -174,9 +178,6 @@ export default function Login() {
                     <Shield size={16} className={styles.inputIcon} />
                     <input type="password" className={styles.input} placeholder="Enter admin secret key" value={form.adminSecret} onChange={set('adminSecret')} />
                   </div>
-                  <p style={{ fontSize: 12, color: '#8899aa', marginTop: 4 }}>
-                    Default key: <code style={{ color: '#f59e0b' }}>edunexus-admin-2024</code> (set in backend .env)
-                  </p>
                 </div>
                 <button type="submit" className={styles.submitBtn} disabled={loading} style={{ background: 'linear-gradient(135deg, #f59e0b, #d97706)' }}>
                   {loading ? <span className={styles.btnLoader} /> : <>Create Admin Account <Shield size={16} /></>}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Eye, EyeOff, Mail, Lock, User, Phone, BookOpen, GraduationCap, ArrowRight, CheckCircle } from 'lucide-react';
+import EmailInput from '../components/EmailInput';
 import toast from 'react-hot-toast';
 import { useAuth } from '../context/AuthContext';
 import api from '../utils/api';
@@ -116,7 +117,7 @@ export default function Register() {
                   <label className={styles.label}>Email Address *</label>
                   <div className={styles.inputWrap}>
                     <Mail size={16} className={styles.inputIcon} />
-                    <input type="email" className={styles.input} placeholder="you@example.com" value={form.email} onChange={set('email')} />
+                    <input type="email" autoComplete="email" name="email" className={styles.input} placeholder="you@example.com" value={form.email} onChange={set('email')} />
                   </div>
                 </div>
 

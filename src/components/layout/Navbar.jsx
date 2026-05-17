@@ -88,7 +88,9 @@ export default function Navbar() {
               )}
             </div>
             <Link to="/courses" className={styles.navLink}>Courses</Link>
-            <Link to="/compare-courses" className={styles.navLink}>Compare</Link>
+              <Link to="/colleges" className={styles.navLink}>Colleges</Link>
+
+            <Link to="/compare-courses"  className={styles.navLink}>Compare</Link>
           </div>
 
           {/* Right actions */}
@@ -147,7 +149,7 @@ export default function Navbar() {
       {open && (
         <div className={styles.mobileMenu}>
           <Link to="/courses" className={styles.mobileLink}>Courses</Link>
-          <Link to="/compare-courses" className={styles.mobileLink}>Compare Courses</Link>
+          <Link to="/compare-courses"  className={styles.mobileLink}>Compare Courses</Link>
           <div className={styles.mobileCats}>
             {categories.map((cat) => (
               <Link key={cat.name} to={`/courses?category=${cat.name}`} className={styles.mobileCat}>

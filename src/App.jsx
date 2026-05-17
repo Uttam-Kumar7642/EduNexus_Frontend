@@ -12,7 +12,10 @@ import Register from './pages/Register';
 import StudentDashboard from './pages/StudentDashboard';
 import MyCourses from './pages/MyCourses';
 import Quiz from './pages/Quiz';
+import CollegeDetails from "./pages/CollegeDetails";
+import Colleges from "./pages/Colleges";
 import AdminDashboard from './pages/AdminDashboard';
+import ForgotPassword from './pages/ForgotPassword';
 
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuth();
@@ -37,13 +40,19 @@ function AppLayout() {
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/course-details/:slug" element={<CourseDetails />} />
+          <Route path="/college/:id" element={<CollegeDetails />} />
+          <Route path="/colleges" element={<Colleges />} />
           <Route path="/compare-courses" element={<CompareCourses />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/register" element={<Register />} />
           <Route path="/student-dashboard" element={<ProtectedRoute><StudentDashboard /></ProtectedRoute>} />
           <Route path="/my-courses" element={<ProtectedRoute><MyCourses /></ProtectedRoute>} />
           <Route path="/quiz/:quizId" element={<ProtectedRoute><Quiz /></ProtectedRoute>} />
           <Route path="/admin-dashboard" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
+          <Route path="/college/:id" element={<CollegeDetails />} />
+          <Route path="/colleges" element={<Colleges />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
