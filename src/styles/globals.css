@@ -227,3 +227,60 @@ img {
 .page-enter {
   animation: fadeUp 0.4s ease forwards;
 }
+
+/* ── RESPONSIVE UTILITIES ── */
+@media (max-width: 768px) {
+  .container { padding: 0 16px !important; }
+}
+
+/* ── HOME PAGE RESPONSIVE ── */
+@media (max-width: 768px) {
+  /* Hero section */
+  section > div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Hide right side stats grid on mobile */
+  section > div > div:nth-child(2)[style*="grid-template-columns: 1fr 1fr"] {
+    display: none !important;
+  }
+
+  /* Search bar */
+  form[style*="border-radius: 12px"] {
+    flex-direction: column !important;
+    border-radius: 12px !important;
+    overflow: visible !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    gap: 8px !important;
+  }
+
+  /* Buttons row */
+  div[style*="display: flex"][style*="gap: 12px"] {
+    flex-wrap: wrap !important;
+  }
+}
+
+/* ═══════════════════════════════════════
+   GLOBAL RESPONSIVE FIXES
+═══════════════════════════════════════ */
+
+/* Base responsive container */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 1024px) {
+  .container { padding: 0 20px; }
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 16px; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 12px; }
+}

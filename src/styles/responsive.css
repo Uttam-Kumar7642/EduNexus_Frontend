@@ -1,0 +1,408 @@
+/* ═══════════════════════════════════════════════════
+   EDUNEXUS — GLOBAL RESPONSIVE STYLES
+   Fixes mobile/tablet layout for all pages
+═══════════════════════════════════════════════════ */
+
+/* Navbar mobile */
+@media (max-width: 768px) {
+  nav .container > div { gap: 12px !important; }
+}
+
+/* ── HOME PAGE ── */
+@media (max-width: 900px) {
+  /* Hero grid → single column */
+  [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Compare section grid */
+  [style*="grid-template-columns: 1fr 1fr"][style*="gap: 48px"] {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* All sections padding */
+  section { padding: 40px 0 !important; }
+
+  /* Hide desktop-only right stats grid */
+  [style*="paddingTop: 100px"] > div > div:last-child > div[style*="grid-template-columns: 1fr 1fr"] {
+    display: none !important;
+  }
+
+  /* Search bar stack */
+  [style*="border-radius: 12px; overflow: hidden"] {
+    flex-direction: column !important;
+  }
+
+  /* Category grid */
+  [style*="minmax(180px, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Course cards grid */
+  [style*="minmax(260px, 1fr)"],
+  [style*="minmax(240px, 1fr)"],
+  [style*="minmax(280px, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Stats bar */
+  [style*="justify-content: space-around"] {
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+  }
+
+  /* Buttons wrap */
+  [style*="display: flex"][style*="gap: 12px"] {
+    flex-wrap: wrap !important;
+  }
+
+  /* Hero title font */
+  h1 { font-size: clamp(1.8rem, 6vw, 2.5rem) !important; }
+  h2 { font-size: clamp(1.4rem, 4vw, 2rem) !important; }
+}
+
+/* ── COLLEGES PAGE ── */
+@media (max-width: 768px) {
+  /* College cards */
+  [style*="minmax(340px, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* College detail grid */
+  [style*="grid-template-columns: 1fr 320px"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* College header grid */
+  [style*="grid-template-columns: 1fr auto"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── COURSES PAGE ── */
+@media (max-width: 768px) {
+  [style*="minmax(280px, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  [style*="minmax(280px, 1fr)"],
+  [style*="minmax(300px, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── AUTH PAGES ── */
+@media (max-width: 768px) {
+  /* Hide left brand panel on mobile */
+  ._left_w2ieg_10 { display: none !important; }
+  ._right_w2ieg_119 { width: 100% !important; }
+  ._page_w2ieg_1 { flex-direction: column !important; }
+  ._formWrap_w2ieg_127 { padding: 24px 16px !important; }
+}
+
+/* ── COMPARE PAGE ── */
+@media (max-width: 768px) {
+  /* Comparison table scroll */
+  [style*="grid-template-columns: 200px repeat"] {
+    display: block !important;
+    overflow-x: auto !important;
+  }
+
+  /* Program tabs wrap */
+  [style*="display: flex"][style*="flexWrap: wrap"] {
+    gap: 6px !important;
+  }
+}
+
+/* ── ADMIN DASHBOARD ── */
+@media (max-width: 768px) {
+  ._overviewGrid_1tuj4_42 {
+    grid-template-columns: 1fr !important;
+  }
+
+  ._statsGrid_1tuj4_16 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  ._tableWrap_1tuj4_60 {
+    overflow-x: auto !important;
+  }
+
+  ._table_1tuj4_60 {
+    min-width: 600px !important;
+  }
+}
+
+/* ── STUDENT DASHBOARD ── */
+@media (max-width: 768px) {
+  ._mainGrid_1wiei_72 {
+    grid-template-columns: 1fr !important;
+  }
+
+  ._statsGrid_1wiei_44 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ── NAVBAR MOBILE ── */
+@media (max-width: 768px) {
+  ._desktopLinks_w2ieg_20 { display: none !important; }
+  
+  /* Make logo smaller on mobile */
+  ._logo_w2ieg_41 { font-size: 18px !important; }
+}
+
+/* ── MY COURSES PAGE ── */
+@media (max-width: 768px) {
+  ._grid_1246y_34 {
+    grid-template-columns: 1fr !important;
+  }
+
+  ._summaryGrid_1246y_13 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ── COLLEGE DETAIL PAGE ── */
+@media (max-width: 768px) {
+  /* Programs grid */
+  [style*="grid-template-columns: 1fr auto"][style*="gap: 16px"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Placement stats */
+  [style*="minmax(180px, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Quick stats */
+  [style*="minmax(140px, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ── GENERAL MOBILE FIXES ── */
+@media (max-width: 480px) {
+  /* All grids become single column on very small screens */
+  [style*="minmax(140px"] { grid-template-columns: repeat(2, 1fr) !important; }
+  [style*="minmax(180px"] { grid-template-columns: repeat(2, 1fr) !important; }
+  [style*="minmax(200px"] { grid-template-columns: 1fr !important; }
+
+  /* Font sizes */
+  h1 { font-size: clamp(1.5rem, 5vw, 2rem) !important; }
+  p { font-size: 14px !important; }
+
+  /* Padding reduction */
+  section { padding: 32px 0 !important; }
+
+  /* OTP boxes */
+  input[id^="otp-"], input[id^="fotp-"] {
+    width: 40px !important;
+    height: 48px !important;
+    font-size: 18px !important;
+  }
+
+  /* Modal width */
+  [style*="maxWidth: 780px"],
+  [style*="maxWidth: 680px"],
+  [style*="maxWidth: 480px"] {
+    max-width: 100% !important;
+    margin: 0 8px !important;
+  }
+}
+
+/* ── TABLET (768px - 1024px) ── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  [style*="minmax(340px, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  [style*="minmax(260px, 1fr)"],
+  [style*="minmax(280px, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  [style*="minmax(240px, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  [style*="grid-template-columns: 1fr 320px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── SCROLLABLE TABLES ON MOBILE ── */
+@media (max-width: 768px) {
+  .tableWrap, [class*="tableWrap"] {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  table { min-width: 500px !important; }
+}
+
+/* ── IMAGES ── */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* ── PREVENT HORIZONTAL SCROLL ── */
+body {
+  overflow-x: hidden !important;
+}
+
+* {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Exception for overflow containers */
+.tableWrap, [class*="tableWrap"],
+[style*="overflow-x: auto"] {
+  max-width: none !important;
+}
+
+/* ── HIDE ON MOBILE ── */
+@media (max-width: 768px) {
+  .hide-mobile { display: none !important; }
+}
+
+/* ── HOME HERO MOBILE FIX ── */
+@media (max-width: 768px) {
+  /* Hero single column */
+  [style*="clamp(1fr, 50vw, 1fr) 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Stats 2x2 grid on mobile */
+  [style*="justify-content: space-around"][style*="display: flex"] {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  /* Categories 2 column */
+  [style*="minmax(180px, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  /* Popular programs 1 col */
+  [style*="minmax(240px, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Featured courses 1 col */
+  [style*="minmax(260px, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* University cards 1 col */
+  [style*="minmax(280px, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Compare section */
+  [style*="grid-template-columns: 1fr 1fr"][style*="gap: 48px"] {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* Lead form */
+  [style*="maxWidth: 560px"] {
+    max-width: 100% !important;
+  }
+
+  /* Testimonials */
+  [style*="minmax(280px, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Search form stack */
+  form[style*="display: flex"][style*="background: #fff"] {
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+
+  form[style*="display: flex"][style*="background: #fff"] input {
+    border-radius: 10px 10px 0 0 !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+
+  form[style*="display: flex"][style*="background: #fff"] button[type="submit"] {
+    border-radius: 0 0 10px 10px !important;
+    width: 100% !important;
+  }
+
+  /* Section padding */
+  section[style*="padding: '60px 0'"] {
+    padding: 36px 0 !important;
+  }
+
+  /* Hero padding */
+  section[style*="paddingTop: 100"] {
+    padding-top: 90px !important;
+    padding-bottom: 36px !important;
+  }
+
+  /* Buttons full width on mobile */
+  [style*="display: flex"][style*="gap: 12px"] > a > button,
+  [style*="display: flex"][style*="gap: 12px"] > button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* ── COLLEGES MOBILE ── */
+@media (max-width: 768px) {
+  [style*="minmax(340px, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  [style*="padding: '40px 36px'"] {
+    padding: 20px 16px !important;
+  }
+
+  [style*="grid-template-columns: 1fr 320px"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  [style*="grid-template-columns: 1fr auto"][style*="gap: 32px"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}
+
+/* ── NAVBAR HAMBURGER ── */
+@media (max-width: 768px) {
+  [class*="desktopLinks"] {
+    display: none !important;
+  }
+
+  [class*="mobileMenu"] {
+    display: flex !important;
+  }
+}
+
+/* ── TABLET ── */
+@media (min-width: 769px) and (max-width: 1024px) {
+  [style*="minmax(340px, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  [style*="minmax(260px, 1fr)"],
+  [style*="minmax(280px, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  [style*="minmax(240px, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}

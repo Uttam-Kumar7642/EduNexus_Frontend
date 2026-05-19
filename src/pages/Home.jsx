@@ -89,7 +89,7 @@ export default function Home() {
       {/* ── HERO ── */}
       <section style={{ background: 'linear-gradient(135deg,#0a1628 0%,#0d2045 60%,#1a3a7a 100%)', paddingTop: 100, paddingBottom: 60 }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'center' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'clamp(1fr, 50vw, 1fr) 1fr', gap: 48, alignItems: 'center' }}>
             <div>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(245,158,11,0.15)', border: '1px solid rgba(245,158,11,0.3)', borderRadius: 100, padding: '6px 14px', marginBottom: 20 }}>
                 <span style={{ fontSize: 12, color: '#f59e0b', fontWeight: 600 }}>🇮🇳 India's Education Operating System</span>
@@ -126,7 +126,7 @@ export default function Home() {
             </div>
 
             {/* Stats grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }} className="hide-mobile">
               {[['🎓','Trusted by','10M+ Students'],['👨‍🏫','Expert Mentors','From Top Universities'],['⭐','Google Rating','4.8/5 (20K+ Reviews)'],['🏆','Success Stories','50K+ Achievers']].map(([icon, label, val], i) => (
                 <div key={i} style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 14, padding: 20 }}>
                   <div style={{ fontSize: 28, marginBottom: 8 }}>{icon}</div>
